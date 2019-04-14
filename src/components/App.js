@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ResourcesList from "./ResourcesList";
 
 const App = () => {
   const [resource, setResource] = useState("posts");
@@ -8,7 +9,7 @@ const App = () => {
         <button onClick={() => setResource("posts")}>Posts</button>
         <button onClick={() => setResource("todos")}>Todos</button>
       </div>
-      {resource}
+      <ResourcesList resource={resource} />
     </div>
   );
 };
