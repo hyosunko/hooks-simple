@@ -15,7 +15,13 @@ const ResourcesList = ({ resource }) => {
     fetchResource(resource);
   }, [resource]);
 
-  return <div>{resources.length}</div>;
+  return (
+    <ul>
+      {resources.map(record => (
+        <li key={record.it}>{record.title}</li>
+      ))}
+    </ul>
+  );
 };
 
 export default ResourcesList;
